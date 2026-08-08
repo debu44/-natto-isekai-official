@@ -2,122 +2,173 @@
 <html lang="ja">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="theme-color" content="#f7f0e5" />
-  <meta name="description" content="『納豆が異世界最強魔術ってマジですか？！』公式作品サイト。" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#140d12" />
+  <meta name="description" content="『納豆が異世界最強魔術ってマジですか？！』公式サイト。魔王城に落ちてきたおにぎりから始まる、異世界×食文化×魔法の物語。" />
+  <meta property="og:title" content="納豆が異世界最強魔術ってマジですか？！｜公式サイト" />
+  <meta property="og:description" content="この世界にないはずの『米』が、魔王城の天井から落ちてきた。" />
   <title>納豆が異世界最強魔術ってマジですか？！｜公式サイト</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-<header class="topbar" id="top">
-  <a class="mini-logo" href="#top"><b>NATTO</b><span>ISEKAI</span></a>
-  <nav class="desktop-nav">
-    <a href="#story">STORY</a><a href="#character">CHARACTER</a><a href="#world">WORLD</a><a href="#episode">EPISODE</a><a href="#news">NEWS</a>
-  </nav>
-  <button class="menu-btn" aria-label="メニューを開く" aria-expanded="false"><i></i><i></i><span>MENU</span></button>
-  <nav class="mobile-nav">
-    <a href="#story">STORY</a><a href="#character">CHARACTER</a><a href="#world">WORLD</a><a href="#episode">EPISODE</a><a href="#news">NEWS</a>
-  </nav>
-</header>
+  <a class="skip-link" href="#main">本文へ</a>
 
-<main>
-<section class="hero">
-  <div class="hero-bgword">NATTO<br>MAGIC</div>
-  <div class="hero-copy reveal">
-    <p class="hero-kicker">異世界 × 食文化 × 魔法</p>
-    <h1><span>納豆が異世界</span><span>最強魔術って</span><em>マジですか？！</em></h1>
-    <p class="hero-en">NATTO GA ISEKAI SAIKYO MAJUTSU TTE MAJI DESUKA?!</p>
-    <p class="catch">その納豆、<strong>世界を救うほど強い。</strong></p>
-    <a class="round-link" href="#story">物語をのぞく <b>↘</b></a>
-  </div>
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="トップへ">
+      <span class="brand-jp">納豆が異世界最強魔術ってマジですか？！</span>
+      <span class="brand-en">NATTO ISEKAI PROJECT</span>
+    </a>
+    <nav class="desktop-nav" aria-label="メインナビゲーション">
+      <a href="#story">STORY</a>
+      <a href="#character">CHARACTER</a>
+      <a href="#world">WORLD</a>
+      <a href="#episode">EPISODE</a>
+      <a href="#gallery">SPECIAL</a>
+    </nav>
+    <button class="menu-btn" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="mobile-nav">
+      <span></span><span></span><small>MENU</small>
+    </button>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="モバイルナビゲーション">
+      <a href="#story">STORY</a><a href="#character">CHARACTER</a><a href="#world">WORLD</a><a href="#episode">EPISODE</a><a href="#gallery">SPECIAL</a>
+    </nav>
+  </header>
 
-  <div class="hero-stage reveal">
-    <div class="sun"></div>
-    <div class="rice">▲<small>ONIGIRI</small></div>
-    <div class="natto"><b>納豆</b><span></span><span></span><span></span></div>
-    <div class="figure rubina"><b>R</b><span>RUBINA</span></div>
-    <div class="figure rivil"><b>R</b><span>RIVIL</span></div>
-    <div class="hero-sticker">魔王なのに<br><b>納豆が嫌い。</b></div>
-  </div>
-  <div class="ticker"><span>NATTO IS MAGIC!　NATTO IS MAGIC!　NATTO IS MAGIC!　NATTO IS MAGIC!</span></div>
-</section>
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-noise" aria-hidden="true"></div>
+      <div class="hero-copy reveal">
+        <p class="hero-kicker">異世界 × 食文化 × 魔法</p>
+        <h1 id="hero-title"><span>納豆が異世界</span><span>最強魔術って</span><em>マジですか？！</em></h1>
+        <p class="hero-en">NATTO GA ISEKAI SAIKYO MAJUTSU TTE MAJI DESUKA?!</p>
+        <p class="hero-lead">この世界にないはずの「米」が、<br><strong>魔王城の天井から落ちてきた。</strong></p>
+        <a class="story-link" href="#prologue"><span>物語のはじまりへ</span><b>↓</b></a>
+      </div>
 
-<section class="news-strip" id="news">
-  <p class="label">LATEST NEWS</p>
-  <time>2026.08.08</time>
-  <p>公式サイト試作版、公開。</p>
-  <a href="#episode">MORE →</a>
-</section>
+      <div class="hero-visual reveal" aria-label="ルビナとリヴィルのキービジュアル領域">
+        <div class="hero-moon" aria-hidden="true"></div>
+        <p class="hero-word" aria-hidden="true">DEMON<br>KING</p>
+        <div class="hero-character hero-rubina">
+          <div class="art-fallback rubina-fallback" aria-hidden="true"><span>R</span></div>
+          <img src="assets/rubina.png" alt="ルビナ＝バランシェ" data-optional-image />
+        </div>
+        <div class="hero-character hero-rivil">
+          <div class="art-fallback rivil-fallback" aria-hidden="true"><span>R</span></div>
+          <img src="assets/rivil.png" alt="リヴィル＝バランシェ" data-optional-image />
+        </div>
+        <div class="onigiri hero-onigiri" aria-hidden="true"><i></i></div>
+        <div class="hero-caption"><span>魔王なのに</span><strong>納豆が嫌い。</strong></div>
+      </div>
 
-<section class="story section" id="story">
-  <div class="section-title reveal"><span>01</span><p>STORY</p><h2>朝ごはんから、<br>世界の常識がひっくり返る。</h2></div>
-  <div class="story-layout">
-    <div class="story-art reveal">
-      <div class="panel p1"><b>「くさい。」</b><small>毎朝の魔力補給</small></div>
-      <div class="panel p2"><b>ドンッ</b><small>天井から白い三角</small></div>
-      <div class="panel p3"><b>「うまっ！」</b><small>米が魔力に変わる</small></div>
-    </div>
-    <div class="story-copy reveal">
-      <p class="lead">魔力補給のため、毎朝どうしても納豆を食べなければならない双子魔王、ルビナとリヴィル。</p>
-      <p>けれど姉のルビナは納豆が大嫌い。いつものように食卓で騒いでいた、その瞬間——天井から白く輝く三角形の“何か”が落ちてきた。</p>
-      <p>この世界には存在しないはずの食べもの。<strong>おにぎり。</strong></p>
-      <blockquote>「これ！ これはなんだ？！」</blockquote>
-    </div>
-  </div>
-</section>
+      <div class="scroll-note" aria-hidden="true"><span>SCROLL TO FALL</span><i></i></div>
+    </section>
 
-<section class="character section" id="character">
-  <div class="section-title reveal"><span>02</span><p>CHARACTER</p><h2>小さな魔王と、<br>食文化を変える人たち。</h2></div>
-  <div class="character-tabs reveal">
-    <button class="active" data-character="rubina">RUBINA</button>
-    <button data-character="rivil">RIVIL</button>
-    <button data-character="koharu">KOHARU</button>
-  </div>
-  <div class="character-feature rubina-feature reveal" id="char-feature">
-    <div class="char-big"><span>01</span><b id="char-initial">R</b><small>OFFICIAL CHARACTER ART</small></div>
-    <div class="char-profile">
-      <p class="role" id="char-role">双子魔王・姉</p>
-      <h3 id="char-name">ルビナ＝バランシェ</h3>
-      <p class="roman" id="char-roman">RUBINA BALANCHE</p>
-      <p id="char-desc">見た目は幼いが、実年齢は500歳を超える魔王。強気で好奇心旺盛。納豆の匂いと粘りを心底嫌っているが、魔力補給のため毎朝食べさせられている。</p>
-      <p class="char-quote" id="char-quote">「こんなの食べるよりだったら、倒れた方がマシよ！」</p>
-      <div class="profile-tags"><span>魔王</span><span>500+</span><span>納豆嫌い</span></div>
-    </div>
-  </div>
-</section>
+    <section class="news-bar" aria-label="最新情報">
+      <strong>NEWS</strong><time datetime="2026-08-08">2026.08.08</time><p>公式サイト リデザイン版公開。</p><a href="#episode">VIEW →</a>
+    </section>
 
-<section class="world section" id="world">
-  <div class="section-title reveal"><span>03</span><p>WORLD</p><h2>食べることは、<br>魔力を得ること。</h2></div>
-  <div class="world-grid reveal">
-    <article><b>01</b><i>FOOD & MAGIC</i><h3>食事＝魔力補給</h3><p>食べものと魔力が密接に結びつく世界。納豆は不人気ながら、魔族にとって重要な補給源。</p></article>
-    <article class="accent"><b>02</b><i>RICE</i><h3>存在しないはずの米</h3><p>異世界に現れた“米”は既存の常識を覆す補給力を見せる。ひと口のおにぎりから物語は動き出す。</p></article>
-    <article><b>03</b><i>DEMON KING</i><h3>双子の魔王</h3><p>城の日常はコミカル。それでも、双子の背後には500年を超える歴史と平穏ではない世界がある。</p></article>
-  </div>
-</section>
+    <section class="prologue" id="prologue" aria-label="プロローグ体験">
+      <div class="prologue-sticky">
+        <div class="prologue-copy p-copy-1"><span>01</span><p>魔王城の、いつもの朝。</p><h2>魔王なのに、<br><em>納豆が嫌い。</em></h2></div>
+        <div class="prologue-copy p-copy-2"><span>02</span><p>その瞬間——</p><h2>天井から、<br><em>白い三角。</em></h2></div>
+        <div class="fall-track" aria-hidden="true"><div class="onigiri falling-onigiri"><i></i></div><div class="impact-ring"></div></div>
+        <div class="prologue-copy p-copy-3"><span>03</span><p>ひと口で常識が変わる。</p><h2>「これ！<br><em>これはなんだ？！</em>」</h2></div>
+      </div>
+    </section>
 
-<section class="episode section" id="episode">
-  <div class="section-title reveal"><span>04</span><p>EPISODE</p><h2>EPISODE 00</h2></div>
-  <article class="episode-card reveal">
-    <div class="ep-visual"><span>00</span><div class="triangle">▲</div><p>魔王城の朝、<br>落ちてきた三角</p></div>
-    <div class="ep-copy">
-      <p class="ep-label">PROLOGUE / 第零章</p>
-      <h3>納豆嫌いの朝に、<br>おにぎりが降ってきた。</h3>
-      <p>双子魔王のいつもの朝食。その日だけは、世界の歴史を変える朝になった。</p>
-      <div><span>RUBINA</span><span>RIVIL</span><span>KOHARU</span></div>
-      <p class="coming">MOVIE — COMING SOON</p>
-    </div>
-  </article>
-</section>
+    <section class="story section" id="story">
+      <header class="section-head reveal"><p><b>01</b> STORY</p><h2>朝ごはんから、<br>世界の常識がひっくり返る。</h2></header>
+      <div class="story-grid">
+        <div class="story-frames reveal">
+          <article class="frame frame-a"><span>毎朝の魔力補給</span><strong>「くさい。<br>絶対やだもん。」</strong></article>
+          <article class="frame frame-b"><span>UNKNOWN FOOD</span><div class="onigiri story-onigiri"><i></i></div><strong>ドンッ</strong></article>
+          <article class="frame frame-c"><span>FIRST BITE</span><strong>魔力が、<br>一気に満ちる。</strong></article>
+        </div>
+        <div class="story-text reveal">
+          <p class="lead">魔力補給のため、毎朝どうしても納豆を食べなければならない双子魔王、ルビナとリヴィル。</p>
+          <p>けれど姉のルビナは納豆が大嫌い。いつものように食卓で騒いでいた、その瞬間。天井から白く輝く三角形の“何か”が落ちてきた。</p>
+          <p>この世界には存在しないはずの食べもの——<strong>おにぎり。</strong></p>
+          <p>そして、その直後。稲穂を握った一人の女性まで空から落ちてくる。</p>
+        </div>
+      </div>
+    </section>
 
-<section class="finale">
-  <p>臭くて、粘って、嫌われて。</p>
-  <h2>それでも、<br><em>世界を変える。</em></h2>
-  <div class="bean bean1"></div><div class="bean bean2"></div><div class="bean bean3"></div>
-  <a href="#top">BACK TO TOP ↑</a>
-</section>
-</main>
+    <section class="character section-dark" id="character">
+      <div class="section-inner">
+        <header class="section-head light reveal"><p><b>02</b> CHARACTER</p><h2>この世界を動かす、<br>ちょっと変な人たち。</h2></header>
+        <div class="character-tabs reveal" role="tablist" aria-label="キャラクター選択">
+          <button class="active" data-character="rubina" role="tab" aria-selected="true">01 RUBINA</button>
+          <button data-character="rivil" role="tab" aria-selected="false">02 RIVIL</button>
+          <button data-character="koharu" role="tab" aria-selected="false">03 KOHARU</button>
+        </div>
+        <article class="character-stage reveal" id="character-stage" data-theme="rubina">
+          <p class="character-bgname" id="char-bgname" aria-hidden="true">RUBINA</p>
+          <div class="character-art">
+            <div class="art-fallback rubina-fallback" id="char-fallback" aria-hidden="true"><span>R</span></div>
+            <img id="char-image" src="assets/rubina.png" alt="ルビナ＝バランシェ" data-optional-image />
+          </div>
+          <div class="character-profile">
+            <p class="character-number" id="char-number">CHARACTER 01</p>
+            <p class="character-role" id="char-role">双子魔王・姉</p>
+            <h3 id="char-name">ルビナ＝バランシェ</h3>
+            <p class="character-roman" id="char-roman">RUBINA BALANCHE</p>
+            <p class="character-desc" id="char-desc">見た目は幼いが、実年齢は500歳を超える魔王。強気で好奇心旺盛。納豆の匂いと粘りを心底嫌っているが、魔力補給のため毎朝食べさせられている。</p>
+            <blockquote id="char-quote">「こんなの食べるよりだったら、倒れた方がマシよ！」</blockquote>
+            <div class="character-tags" id="char-tags"><span>魔王</span><span>500+</span><span>納豆嫌い</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
 
-<footer><b>納豆が異世界最強魔術ってマジですか？！</b><span>© 2026 NATTO ISEKAI PROJECT</span></footer>
-<script src="script.js"></script>
+    <section class="world section" id="world">
+      <header class="section-head reveal"><p><b>03</b> WORLD</p><h2>食べることは、<br>魔力を得ること。</h2></header>
+      <div class="world-intro reveal"><span>FOOD → MAGIC</span><p>この世界では、食べものと魔力が密接につながっている。だから「何を食べるか」は、文化だけでなく力そのものを左右する。</p></div>
+      <div class="world-grid">
+        <article class="reveal"><b>01</b><small>BEANS</small><h3>豆と魔族</h3><p>豆は世界の主食のひとつ。納豆は魔力補給に有効だが、味や匂いから好まれているとは言い難い。</p></article>
+        <article class="world-rice reveal"><b>02</b><small>RICE</small><h3>米という異物</h3><p>魔王城に突如現れたおにぎり。その補給力は、ルビナたちの知る食の常識を揺さぶる。</p></article>
+        <article class="reveal"><b>03</b><small>HISTORY</small><h3>500年の空白</h3><p>双子魔王と、500年前からこの世界に関わる存在。日常の裏側には、長い歴史と権力の歪みが眠っている。</p></article>
+      </div>
+    </section>
+
+    <section class="episode section-accent" id="episode">
+      <div class="section-inner">
+        <header class="section-head reveal"><p><b>04</b> EPISODE</p><h2>EPISODE 00</h2></header>
+        <article class="episode-card reveal">
+          <div class="episode-visual">
+            <span>00</span><div class="onigiri episode-onigiri"><i></i></div><p>魔王城の朝、<br>落ちてきた三角。</p>
+          </div>
+          <div class="episode-copy">
+            <p class="episode-label">PROLOGUE / 第零章</p>
+            <h3>納豆嫌いの朝に、<br>おにぎりが降ってきた。</h3>
+            <p>双子魔王のいつもの朝食。その日だけは、世界の歴史を変える朝になった。</p>
+            <div class="episode-cast"><span>RUBINA</span><span>RIVIL</span><span>KOHARU</span></div>
+            <p class="coming">STORY CONTENT — COMING SOON</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="gallery section" id="gallery">
+      <header class="section-head reveal"><p><b>05</b> SPECIAL / GALLERY</p><h2>物語の外側にも、<br>この世界は続いている。</h2></header>
+      <div class="gallery-grid reveal">
+        <article><span>01</span><h3>ILLUSTRATION</h3><p>季節イラスト・キービジュアル</p></article>
+        <article><span>02</span><h3>4COMA</h3><p>ゆるい日常と制作過程</p></article>
+        <article><span>03</span><h3>MOVIE</h3><p>OP・映像コンテンツ</p></article>
+      </div>
+    </section>
+
+    <section class="finale">
+      <div class="natto-line" aria-hidden="true"></div>
+      <p>臭くて、粘って、嫌われて。</p>
+      <h2>それでも、<br><em>世界を変える。</em></h2>
+      <a href="#top">BACK TO TOP ↑</a>
+    </section>
+  </main>
+
+  <footer>
+    <b>納豆が異世界最強魔術ってマジですか？！</b>
+    <span>© 2026 NATTO ISEKAI PROJECT</span>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
