@@ -452,13 +452,23 @@ def trim_and_level(x, target_db=-16.0):
 def voices(total_samples):
     track = np.zeros((total_samples, 2))
     duck = np.zeros(total_samples)
+    ends = {}  # voice file -> end time, so a line can follow the previous one
     for v in TL['voices']:
         path = find_voice(v['file'])
+        label = f"{v['who']}{v.get('n', '')}番目「{v['text']}」"
         if not path:
-            print(f"  - voice/{v['file']}: なし（{v['who']}「{v['text']}」）")
+            print(f"  - voice/{v['file']}: なし（{label}）")
             continue
         x = trim_and_level(load_audio(path))
-        i = int((START[v['step']] + v['at'] / FPS) * SR)
+        if 'after' in v:
+            if v['after'] not in ends:
+                print(f"  - voice/{v['file']}: {v['after']} がないので省略（{label}）")
+                continue
+            t0 = ends[v['after']] + v.get('gap', 6) / FPS
+        else:
+            t0 = START[v['step']] + v['at'] / FPS
+        i = int(t0 * SR)
+        ends[v['file']] = t0 + x.shape[0] / SR
         j = min(total_samples, i + x.shape[0])
         track[i:j] += x[: j - i]
         duck[max(0, i - int(0.08 * SR)) : j + int(0.25 * SR)] = 1

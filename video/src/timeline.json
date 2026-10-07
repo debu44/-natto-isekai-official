@@ -3,23 +3,147 @@
   "montageCut": 30,
   "stampAt": 38,
   "steps": [
-    {"id": "opening", "dur": 165, "next": {"kind": "fade", "len": 20}},
-    {"id": "morning", "dur": 150, "next": {"kind": "fade", "len": 15}},
-    {"id": "natto", "dur": 140, "next": {"kind": "fade", "len": 12}},
-    {"id": "magic", "dur": 110, "next": {"kind": "cut", "len": 0}},
-    {"id": "onigiri", "dur": 160, "next": {"kind": "wipe", "len": 12}},
-    {"id": "lunge", "dur": 95, "next": {"kind": "fade", "len": 15}},
-    {"id": "eating", "dur": 150, "next": {"kind": "fade", "len": 15}},
-    {"id": "koharu", "dur": 160, "next": {"kind": "fade", "len": 10}},
-    {"id": "montage", "dur": 120, "next": {"kind": "fade", "len": 18}},
-    {"id": "tagline", "dur": 140, "next": {"kind": "fade", "len": 20}},
-    {"id": "title", "dur": 240}
+    {
+      "id": "opening",
+      "dur": 165,
+      "next": {
+        "kind": "fade",
+        "len": 20
+      }
+    },
+    {
+      "id": "morning",
+      "dur": 150,
+      "next": {
+        "kind": "fade",
+        "len": 15
+      }
+    },
+    {
+      "id": "natto",
+      "dur": 140,
+      "next": {
+        "kind": "fade",
+        "len": 12
+      }
+    },
+    {
+      "id": "magic",
+      "dur": 110,
+      "next": {
+        "kind": "cut",
+        "len": 0
+      }
+    },
+    {
+      "id": "onigiri",
+      "dur": 160,
+      "next": {
+        "kind": "wipe",
+        "len": 12
+      }
+    },
+    {
+      "id": "lunge",
+      "dur": 95,
+      "next": {
+        "kind": "fade",
+        "len": 15
+      }
+    },
+    {
+      "id": "eating",
+      "dur": 150,
+      "next": {
+        "kind": "fade",
+        "len": 15
+      }
+    },
+    {
+      "id": "koharu",
+      "dur": 160,
+      "next": {
+        "kind": "fade",
+        "len": 10
+      }
+    },
+    {
+      "id": "montage",
+      "dur": 120,
+      "next": {
+        "kind": "fade",
+        "len": 18
+      }
+    },
+    {
+      "id": "tagline",
+      "dur": 140,
+      "next": {
+        "kind": "fade",
+        "len": 20
+      }
+    },
+    {
+      "id": "title",
+      "dur": 240
+    }
   ],
   "voices": [
-    {"file": "opening.wav", "step": "opening", "at": 60, "who": "ナレーション（男性3）", "text": "魔王城の朝、落ちてきた三角。"},
-    {"file": "natto.wav", "step": "natto", "at": 12, "who": "ルビナ（女の子）", "text": "くさい。絶対やだもん。"},
-    {"file": "lunge.wav", "step": "lunge", "at": 4, "who": "ルビナ（女の子）", "text": "それ、ルビナの！"},
-    {"file": "koharu.wav", "step": "koharu", "at": 18, "who": "こはる（女性2）", "text": "（落下して驚く声）"},
-    {"file": "title.wav", "step": "title", "at": 8, "who": "ルビナ または ナレーション", "text": "納豆が異世界最強魔術ってマジですか！？"}
+    {
+      "file": "rubina_01",
+      "step": "morning",
+      "at": 24,
+      "who": "ルビナ",
+      "n": 1,
+      "text": "ワタシ、これ嫌い。くさいもん。ね、リヴィル"
+    },
+    {
+      "file": "rivil_01",
+      "after": "rubina_01",
+      "gap": 6,
+      "who": "リヴィル",
+      "n": 1,
+      "text": "……うん。くさい"
+    },
+    {
+      "file": "rubina_03",
+      "step": "natto",
+      "at": 10,
+      "who": "ルビナ",
+      "n": 3,
+      "text": "こんなの食べるよりだったら、倒れた方がマシよ！"
+    },
+    {
+      "file": "butler_03",
+      "step": "lunge",
+      "at": 2,
+      "who": "執事",
+      "n": 3,
+      "text": "ルビナ様！"
+    },
+    {
+      "file": "rubina_14",
+      "step": "eating",
+      "at": 45,
+      "who": "ルビナ",
+      "n": 14,
+      "text": "……うまい"
+    },
+    {
+      "file": "koharu_01",
+      "step": "koharu",
+      "at": 14,
+      "who": "こはる",
+      "n": 1,
+      "text": "あ、私のおにぎり……って"
+    },
+    {
+      "file": "koharu_02",
+      "after": "koharu_01",
+      "gap": 8,
+      "who": "こはる",
+      "n": 2,
+      "text": "……って、ここ、どこ？"
+    }
   ]
 }
