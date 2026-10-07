@@ -406,14 +406,47 @@ def load_audio(path):
     return x.reshape(-1, 2)
 
 
+AUDIO_EXT = ('.wav', '.mp3', '.m4a', '.ogg', '.flac')
+
+
 def find_voice(name):
+    """Matches 'natto' to natto.wav, and '03' to VOICEPEAK exports like '03-セリフ.wav'."""
     stem = os.path.splitext(name)[0]
     if not os.path.isdir(VOICE_DIR):
         return None
-    for f in sorted(os.listdir(VOICE_DIR)):
-        if os.path.splitext(f)[0] == stem and f.lower().endswith(('.wav', '.mp3', '.m4a', '.ogg', '.flac')):
+    files = sorted(f for f in os.listdir(VOICE_DIR) if f.lower().endswith(AUDIO_EXT))
+    for f in files:
+        if os.path.splitext(f)[0] == stem:
+            return os.path.join(VOICE_DIR, f)
+    for f in files:
+        if f.startswith(stem + '-') or f.startswith(stem + '_'):
             return os.path.join(VOICE_DIR, f)
     return None
+
+
+def trim_and_level(x, target_db=-16.0):
+    """Cuts leading/trailing silence and levels the spoken part (not the padding)."""
+    mono = np.abs(x).mean(axis=1)
+    win = int(0.02 * SR)
+    e = np.sqrt(np.convolve(mono ** 2, np.ones(win) / win, mode='same'))
+    thr = max(e.max() * 0.08, 1e-4)
+    idx = np.where(e > thr)[0]
+    if idx.size == 0:
+        return x
+    a = max(0, idx[0] - int(0.05 * SR))
+    b = min(x.shape[0], idx[-1] + int(0.15 * SR))
+    x = x[a:b].copy()
+    speech = e[a:b] > thr
+    rms = np.sqrt((x[speech] ** 2).mean()) + 1e-9
+    x *= 10 ** (target_db / 20) / rms
+    peak = np.abs(x).max()
+    if peak > 0.95:
+        x *= 0.95 / peak
+    n = int(0.01 * SR)  # tiny fades so cuts don't click
+    ramp = np.linspace(0, 1, n)[:, None]
+    x[:n] *= ramp
+    x[-n:] *= ramp[::-1]
+    return x
 
 
 def voices(total_samples):
@@ -424,9 +457,7 @@ def voices(total_samples):
         if not path:
             print(f"  - voice/{v['file']}: なし（{v['who']}「{v['text']}」）")
             continue
-        x = load_audio(path)
-        rms = np.sqrt((x ** 2).mean()) + 1e-9
-        x *= 10 ** (-17 / 20) / rms  # even level across lines
+        x = trim_and_level(load_audio(path))
         i = int((START[v['step']] + v['at'] / FPS) * SR)
         j = min(total_samples, i + x.shape[0])
         track[i:j] += x[: j - i]
