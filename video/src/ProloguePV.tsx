@@ -46,7 +46,7 @@ const shots: Record<string, ShotDef> = {
   natto: {
     img: 'bg_special_S01_natto_closeup.png',
     label: 'SCENE 01 / NATTO',
-    lines: ['「くさい。', '絶対やだもん。」'],
+    lines: ['「ワタシ、これ嫌い。', 'くさいもん。」'],
     body: '不人気でも、魔力を補うためには必要。それが、この世界での納豆だった。',
     align: 'right',
     from: {s: 1.05, x: 0, y: 0},
@@ -74,11 +74,10 @@ const shots: Record<string, ShotDef> = {
   lunge: {
     img: 'bg_special_S04_rubina_lunge.png',
     label: 'SCENE 04 / FIRST CONTACT',
-    lines: ['「それ、', 'ルビナの！」'],
+    lines: ['先に動いたのは、', 'ルビナだった。'],
     align: 'left',
     from: {s: 1.06, x: 0, y: 0},
     to: {s: 1.14, x: -1, y: 0},
-    size: 120,
     punch: true,
   },
   eating: {

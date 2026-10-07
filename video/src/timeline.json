@@ -13,7 +13,7 @@
     },
     {
       "id": "morning",
-      "dur": 150,
+      "dur": 210,
       "next": {
         "kind": "fade",
         "len": 15
@@ -53,7 +53,7 @@
     },
     {
       "id": "eating",
-      "dur": 150,
+      "dur": 175,
       "next": {
         "kind": "fade",
         "len": 15
@@ -90,60 +90,48 @@
   ],
   "voices": [
     {
-      "file": "rubina_01",
+      "file": "rubina_03",
       "step": "morning",
-      "at": 24,
+      "at": 8,
+      "maxGap": 0.35,
       "who": "ルビナ",
-      "n": 1,
+      "n": "03",
+      "text": "朝食の言い合い（「こんなの食べるより…マシよ！」と推定）"
+    },
+    {
+      "file": "rubina_00",
+      "step": "natto",
+      "at": 10,
+      "maxGap": 0.3,
+      "who": "ルビナ",
+      "n": "00",
       "text": "ワタシ、これ嫌い。くさいもん。ね、リヴィル"
     },
     {
-      "file": "rivil_01",
-      "after": "rubina_01",
-      "gap": 6,
-      "who": "リヴィル",
-      "n": 1,
-      "text": "……うん。くさい"
-    },
-    {
-      "file": "rubina_03",
-      "step": "natto",
-      "at": 10,
+      "file": "rubina_01",
+      "step": "magic",
+      "at": 8,
+      "maxGap": 0.3,
       "who": "ルビナ",
-      "n": 3,
-      "text": "こんなの食べるよりだったら、倒れた方がマシよ！"
+      "n": "01",
+      "text": "うっさい（推定）"
     },
     {
-      "file": "butler_03",
-      "step": "lunge",
-      "at": 2,
-      "who": "執事",
-      "n": 3,
-      "text": "ルビナ様！"
-    },
-    {
-      "file": "rubina_14",
+      "file": "rubina_05",
       "step": "eating",
-      "at": 45,
+      "at": 15,
+      "maxGap": 0.3,
       "who": "ルビナ",
-      "n": 14,
-      "text": "……うまい"
+      "n": "05",
+      "text": "ほぅ！このもちもちとした一粒一粒は『おにぎり』と言うんだな！！（推定）"
     },
     {
-      "file": "koharu_01",
-      "step": "koharu",
-      "at": 14,
-      "who": "こはる",
-      "n": 1,
-      "text": "あ、私のおにぎり……って"
-    },
-    {
-      "file": "koharu_02",
-      "after": "koharu_01",
-      "gap": 8,
-      "who": "こはる",
-      "n": 2,
-      "text": "……って、ここ、どこ？"
+      "file": "rubina_15",
+      "step": "montage",
+      "at": 4,
+      "who": "ルビナ",
+      "n": "15",
+      "text": "どうだ（推定）"
     }
   ]
 }

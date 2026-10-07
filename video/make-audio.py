@@ -424,7 +424,7 @@ def find_voice(name):
     return None
 
 
-def trim_and_level(x, target_db=-16.0):
+def trim_and_level(x, target_db=-16.0, max_gap=None):
     """Cuts leading/trailing silence and levels the spoken part (not the padding)."""
     mono = np.abs(x).mean(axis=1)
     win = int(0.02 * SR)
@@ -437,6 +437,15 @@ def trim_and_level(x, target_db=-16.0):
     b = min(x.shape[0], idx[-1] + int(0.15 * SR))
     x = x[a:b].copy()
     speech = e[a:b] > thr
+    if max_gap:  # shorten long pauses inside the line
+        keep = np.ones(x.shape[0], bool)
+        run = 0
+        limit = int(max_gap * SR)
+        for k in range(x.shape[0]):
+            run = 0 if speech[k] else run + 1
+            if run > limit:
+                keep[k] = False
+        x, speech = x[keep], speech[keep]
     rms = np.sqrt((x[speech] ** 2).mean()) + 1e-9
     x *= 10 ** (target_db / 20) / rms
     peak = np.abs(x).max()
@@ -459,7 +468,7 @@ def voices(total_samples):
         if not path:
             print(f"  - voice/{v['file']}: なし（{label}）")
             continue
-        x = trim_and_level(load_audio(path))
+        x = trim_and_level(load_audio(path), max_gap=v.get('maxGap'))
         if 'after' in v:
             if v['after'] not in ends:
                 print(f"  - voice/{v['file']}: {v['after']} がないので省略（{label}）")
