@@ -1,0 +1,25 @@
+{
+  "fps": 30,
+  "montageCut": 30,
+  "stampAt": 38,
+  "steps": [
+    {"id": "opening", "dur": 165, "next": {"kind": "fade", "len": 20}},
+    {"id": "morning", "dur": 150, "next": {"kind": "fade", "len": 15}},
+    {"id": "natto", "dur": 140, "next": {"kind": "fade", "len": 12}},
+    {"id": "magic", "dur": 110, "next": {"kind": "cut", "len": 0}},
+    {"id": "onigiri", "dur": 160, "next": {"kind": "wipe", "len": 12}},
+    {"id": "lunge", "dur": 95, "next": {"kind": "fade", "len": 15}},
+    {"id": "eating", "dur": 150, "next": {"kind": "fade", "len": 15}},
+    {"id": "koharu", "dur": 160, "next": {"kind": "fade", "len": 10}},
+    {"id": "montage", "dur": 120, "next": {"kind": "fade", "len": 18}},
+    {"id": "tagline", "dur": 140, "next": {"kind": "fade", "len": 20}},
+    {"id": "title", "dur": 240}
+  ],
+  "voices": [
+    {"file": "opening.wav", "step": "opening", "at": 60, "who": "ナレーション（男性3）", "text": "魔王城の朝、落ちてきた三角。"},
+    {"file": "natto.wav", "step": "natto", "at": 12, "who": "ルビナ（女の子）", "text": "くさい。絶対やだもん。"},
+    {"file": "lunge.wav", "step": "lunge", "at": 4, "who": "ルビナ（女の子）", "text": "それ、ルビナの！"},
+    {"file": "koharu.wav", "step": "koharu", "at": 18, "who": "こはる（女性2）", "text": "（落下して驚く声）"},
+    {"file": "title.wav", "step": "title", "at": 8, "who": "ルビナ または ナレーション", "text": "納豆が異世界最強魔術ってマジですか！？"}
+  ]
+}
